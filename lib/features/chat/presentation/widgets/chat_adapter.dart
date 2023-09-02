@@ -19,13 +19,13 @@ class ChatFacebookAdapter {
     int insertIndex = items.length;
     items.insert(insertIndex, msg);
     scrollController.animateTo(scrollController.position.maxScrollExtent + 100,
-        duration: Duration(milliseconds: 100), curve: Curves.easeOut);
+        duration: const Duration(milliseconds: 100), curve: Curves.easeOut);
   }
 
   Widget getView() {
     return ListView.builder(
       itemCount: items.length,
-      padding: EdgeInsets.symmetric(vertical: 10),
+      padding: const EdgeInsets.symmetric(vertical: 10),
       controller: scrollController,
       itemBuilder: (context, index) {
         Message item = items[index];
@@ -40,22 +40,24 @@ class ChatFacebookAdapter {
       children: <Widget>[
         item.showTime
             ? Container(
-                padding: EdgeInsets.all(5),
+                padding: const EdgeInsets.all(5),
                 child: Text(item.date,
-                    style: TextStyle(fontSize: 12, color: MyColors.grey_40)),
+                    style:
+                        const TextStyle(fontSize: 12, color: MyColors.grey_40)),
               )
-            : Container(width: 0, height: 0),
+            : const SizedBox(width: 0, height: 0),
         Row(
           crossAxisAlignment:
               isMe ? CrossAxisAlignment.end : CrossAxisAlignment.start,
           children: <Widget>[
-            Container(width: isMe ? 20 : 10, height: 0),
+            SizedBox(width: isMe ? 20 : 10, height: 0),
             isMe
-                ? Container(width: 0, height: 0)
+                ? const SizedBox(width: 0, height: 0)
                 : Container(
                     width: 30,
                     height: 30,
-                    margin: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+                    margin:
+                        const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
                     child: CircleImage(
                       imageProvider: AssetImage(Img.get('robot.jpg')),
                     ),
@@ -72,11 +74,11 @@ class ChatFacebookAdapter {
                       ),
                       margin: EdgeInsets.fromLTRB(
                           isMe ? 20 : 0, 5, isMe ? 0 : 20, 5),
-                      color: isMe ? Color(0xff0382FE) : MyColors.grey_10,
+                      color: isMe ? const Color(0xff20813c) : MyColors.grey_10,
                       elevation: 0,
                       child: Padding(
-                        padding:
-                            EdgeInsets.symmetric(horizontal: 15, vertical: 8),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 15, vertical: 8),
                         child: Text(item.content,
                             style: MyText.subhead(context)!.copyWith(
                                 color: isMe ? Colors.white : MyColors.grey_90)),
@@ -86,15 +88,18 @@ class ChatFacebookAdapter {
             ),
             (index == items.length - 1 && isMe)
                 ? Container(
-                    padding: EdgeInsets.all(5),
-                    child: Align(
+                    padding: const EdgeInsets.all(5),
+                    child: const Align(
                       alignment: Alignment.bottomRight,
-                      child: Icon(Icons.check_circle,
-                          size: 10, color: Color(0xff0382FE)),
+                      child: Icon(
+                        Icons.check_circle,
+                        size: 10,
+                        color: Color(0xff20813c),
+                      ),
                     ),
                   )
-                : Container(width: 10, height: 10),
-            Container(width: isMe ? 10 : 20, height: 0)
+                : const SizedBox(width: 10, height: 10),
+            SizedBox(width: isMe ? 10 : 20, height: 0)
           ],
         )
       ],
