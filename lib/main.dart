@@ -13,7 +13,7 @@ import 'package:smart_gebere/features/onboarding/screens/splash.dart';
 import 'package:smart_gebere/core/bloc.dart';
 import 'package:smart_gebere/features/user/presentation/pages/login.dart';
 import 'package:smart_gebere/features/user/presentation/pages/user_profile_screen.dart';
-import 'package:smart_gebere/features/blog/presentation/screen/home_screen.dart';
+import 'package:smart_gebere/features/home/screen/home_screen.dart';
 import 'package:smart_gebere/features/blog/presentation/screen/addBlog.dart';
 import 'package:smart_gebere/features/user/domain/usecases/get_user.dart';
 import 'package:smart_gebere/features/user/domain/usecases/login_user.dart';

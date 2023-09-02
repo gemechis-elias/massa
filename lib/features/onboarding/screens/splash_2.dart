@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:smart_gebere/features/blog/presentation/screen/home_screen.dart';
+import 'package:smart_gebere/features/home/screen/home_screen.dart';
 
 import 'onboarding1.dart';
 
