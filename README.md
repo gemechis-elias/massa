@@ -4,10 +4,10 @@ Massaa is Amharic word with meaning 'Farm'. Our "AI for Agriculture" app offers 
 ## Screenshot Demo
 
 <div style="display: flex; flex-direction: row;">
-  <img src="screenshot/image1.jpg" alt="Mobile App Screenshot" width="180" />
-  <img src="screenshot/image2.jpg" alt="Mobile App Screenshot" width="180" />
-  <img src="screenshot/image3.jpg" alt="Mobile App Screenshot" width="180" />
-  <img src="screenshot/image4.jpg" alt="Mobile App Screenshot" width="180" />
+  <img src="screenshot/image_1.jpg" alt="Mobile App Screenshot" width="180" />
+  <img src="screenshot/image_2.jpg" alt="Mobile App Screenshot" width="180" />
+  <img src="screenshot/image_3.jpg" alt="Mobile App Screenshot" width="180" />
+  <img src="screenshot/image_4.jpg" alt="Mobile App Screenshot" width="180" />
 </div>
 
  
