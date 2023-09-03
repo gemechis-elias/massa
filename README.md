@@ -1,6 +1,21 @@
 # What is Massa
 Massaa is Amharic word with meaning 'Farm'. Our "AI for Agriculture" app offers a solution by providing personalized insights. Through advanced data analytics, we empower farmers to make well-informed decisions about crop selection, timing, resource management, and more. This bridges the information gap, enhances yields, increases profitability, and promotes sustainable farming practices in the region.
 
+## Screenshot Demo
+
+<div style="display: flex; flex-direction: row;">
+  <img src="screenshot/image1.jpg" alt="Mobile App Screenshot" width="180" />
+  <img src="screenshot/image2.jpg" alt="Mobile App Screenshot" width="180" />
+  <img src="screenshot/image3.jpg" alt="Mobile App Screenshot" width="180" />
+  <img src="screenshot/image4.jpg" alt="Mobile App Screenshot" width="180" />
+</div>
+
+ 
+## Features Added Yet:
+- Daily Insight 
+- Chat With AI
+- Recommendation
+
 ## Chating With AI
 ```json
    {"message":" hi "}

@@ -6,6 +6,7 @@ import 'package:smart_gebere/core/utils/greeting.dart';
 import 'package:flutter/material.dart';
 import 'package:graphic/graphic.dart' as graphic;
 import '../../chat/presentation/screen/chat_home.dart';
+import '../../forum/presentation/screen/forum.dart';
 import '../../user/presentation/pages/user_profile.dart';
 import 'home_page.dart';
 
@@ -28,7 +29,7 @@ class _HomeState extends State<Home> {
   List<Widget> listOfStrings = [
     const HomePage(),
     ChatBotRoute(),
-    ProfileRedRoute(),
+    ForumRoute(),
     ProfileRedRoute()
   ];
 
@@ -61,28 +62,28 @@ class _HomeState extends State<Home> {
           SalomonBottomBarItem(
             icon: const Icon(Icons.home),
             title: const Text("Home"),
-            selectedColor: Color(0xff20813c),
+            selectedColor: const Color(0xff20813c),
           ),
 
           /// Likes
           SalomonBottomBarItem(
             icon: const Icon(Icons.chat),
             title: const Text("Chat"),
-            selectedColor: Color(0xff20813c),
+            selectedColor: const Color(0xff20813c),
           ),
 
           /// Search
           SalomonBottomBarItem(
             icon: const Icon(Icons.group),
-            title: const Text("Search"),
-            selectedColor: Color(0xff20813c),
+            title: const Text("Forum"),
+            selectedColor: const Color(0xff20813c),
           ),
 
           /// Profile
           SalomonBottomBarItem(
             icon: const Icon(Icons.person),
             title: const Text("Profile"),
-            selectedColor: Color(0xff20813c),
+            selectedColor: const Color(0xff20813c),
           ),
         ],
       ),

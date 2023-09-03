@@ -6,9 +6,10 @@ import 'package:flutter/material.dart';
 import 'package:graphic/graphic.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:graphic/graphic.dart' as graphic;
-
+import 'package:smart_gebere/core/utils/clear_token.dart';
 import '../../../core/data/img.dart';
 import '../../../core/data/my_colors.dart';
+import '../../analysis/presentation/screens/analysis.dart';
 import '../widgets/animation.dart';
 
 class HomePage extends StatefulWidget {
@@ -26,6 +27,7 @@ List<Map<String, Object>> data = [
 ];
 
 class _HomePageState extends State<HomePage> {
+  @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Container(
@@ -101,8 +103,14 @@ class _HomePageState extends State<HomePage> {
                   ),
                   const Spacer(),
                   IconButton(
-                    icon: const Icon(Icons.search, color: Colors.white),
-                    onPressed: () {},
+                    icon: const Icon(Icons.power_settings_new,
+                        color: Colors.white),
+                    onPressed: () async {
+                      await clearAuthToken();
+
+                      // ignore: use_build_context_synchronously
+                      Navigator.pushReplacementNamed(context, '/login');
+                    },
                   ),
                   IconButton(
                     icon: const Icon(Icons.more_vert, color: Colors.white),
@@ -444,46 +452,56 @@ class _HomePageState extends State<HomePage> {
                     ],
                   ),
                   Container(height: 20),
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(10),
-                      boxShadow: const [
-                        BoxShadow(
-                          color: Color.fromRGBO(149, 157, 165, 0.2),
-                          blurRadius: 24,
-                          offset: Offset(0, 8),
-                        ),
-                      ],
-                    ),
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 15, horizontal: 15),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              const Text(
-                                "Recommendations",
-                                style: TextStyle(
-                                    fontSize: 18, color: MyColors.grey_80),
-                              ),
-                              Container(height: 10),
-                              const Text(
-                                "Receive personalized recommendations and valuable suggestions by simply inputting your agricultural data.",
-                                style: TextStyle(color: MyColors.grey_40),
-                              ),
-                              Container(height: 5),
-                            ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const AnalysisRoute()),
+                      );
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: const [
+                          BoxShadow(
+                            color: Color.fromRGBO(149, 157, 165, 0.2),
+                            blurRadius: 24,
+                            offset: Offset(0, 8),
                           ),
-                        ),
-                        const Icon(
-                          Icons.chevron_right, // Replace with your desired icon
-                          color: MyColors.grey_40,
-                        ),
-                      ],
+                        ],
+                      ),
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 15, horizontal: 15),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                const Text(
+                                  "Recommendations",
+                                  style: TextStyle(
+                                      fontSize: 18, color: MyColors.grey_80),
+                                ),
+                                Container(height: 10),
+                                const Text(
+                                  "Receive personalized recommendations and valuable suggestions by simply inputting your agricultural data.",
+                                  style: TextStyle(color: MyColors.grey_40),
+                                ),
+                                Container(height: 5),
+                              ],
+                            ),
+                          ),
+                          const Icon(
+                            Icons
+                                .chevron_right, // Replace with your desired icon
+                            color: MyColors.grey_40,
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   Container(height: 15),
@@ -559,11 +577,11 @@ class _HomePageState extends State<HomePage> {
                                     ),
                                   ),
                                 ),
-                                Container(
-                                  width: 2,
-                                  height: 50,
-                                  color: Colors.green,
-                                ),
+                                // Container(
+                                //   width: 2,
+                                //   height: 50,
+                                //   color: Colors.green,
+                                // ),
                                 const SizedBox(
                                     width:
                                         10), // Add some spacing to the right of the last widget
@@ -621,11 +639,11 @@ class _HomePageState extends State<HomePage> {
                                     ),
                                   ),
                                 ),
-                                Container(
-                                  width: 2,
-                                  height: 50,
-                                  color: Colors.green,
-                                ),
+                                // Container(
+                                //   width: 2,
+                                //   height: 50,
+                                //   color: Colors.green,
+                                // ),
                                 const SizedBox(
                                     width:
                                         10), // Add some spacing to the right of the last widget

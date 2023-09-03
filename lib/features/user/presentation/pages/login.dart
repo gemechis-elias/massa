@@ -28,11 +28,10 @@ class _LoginState extends State<Login> {
                 Container(
                   width: double.infinity,
                   height: 300,
-                  decoration: const BoxDecoration(color: Colors.white),
+                  decoration: const BoxDecoration(color: Color(0xff20813c)),
                   child: Center(
                     child: Container(
-                      width: 141,
-                      height: 54,
+                      width: 181,
                       margin: const EdgeInsets.only(bottom: 50),
                       child: Image.asset('assets/images/logo.png'),
                     ),
@@ -45,7 +44,7 @@ class _LoginState extends State<Login> {
                     width: MediaQuery.of(context).size.width,
                     height: 120,
                     decoration: const BoxDecoration(
-                      color: Color(0xFF004600),
+                      color: Colors.white,
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(20),
                         topRight: Radius.circular(20),
@@ -66,7 +65,7 @@ class _LoginState extends State<Login> {
                                 'LOGIN',
                                 style: TextStyle(
                                     color: activeIndex == 0
-                                        ? Colors.white
+                                        ? Colors.black
                                         : Colors.grey,
                                     fontFamily: 'Urbanist-Bold',
                                     fontSize: 18),
@@ -84,7 +83,7 @@ class _LoginState extends State<Login> {
                                 'SIGN UP',
                                 style: TextStyle(
                                     color: activeIndex == 1
-                                        ? Colors.white
+                                        ? Colors.black
                                         : Colors.grey,
                                     fontFamily: 'Urbanist-Bold',
                                     fontSize: 18),

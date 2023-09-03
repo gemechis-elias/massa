@@ -98,7 +98,7 @@ class onBoardingNavigation extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10)),
-                    backgroundColor: const Color(0xFF004600)),
+                    backgroundColor: const Color(0xff20813c)),
                 child: const Text(
                   'Get Started',
                   style: TextStyle(color: Colors.white),
@@ -136,7 +136,7 @@ class onBoardingNavigation extends StatelessWidget {
                       style: ElevatedButton.styleFrom(
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10)),
-                          backgroundColor: const Color(0xFF004600)),
+                          backgroundColor: const Color(0xff20813c)),
                       child: const Icon(
                         Icons.arrow_forward,
                         color: Colors.white,
@@ -168,7 +168,7 @@ class DotIndicator extends StatelessWidget {
       height: 8,
       width: isActive ? 18 : 12,
       decoration: BoxDecoration(
-          color: isActive ? const Color(0xFF004600) : Colors.grey,
+          color: isActive ? const Color(0xff20813c) : Colors.grey,
           borderRadius: const BorderRadius.all(Radius.circular(12))),
     );
   }

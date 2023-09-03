@@ -31,7 +31,7 @@ class ChatBotRouteState extends State<ChatBotRoute> {
     super.initState();
     items.add(Message.time(
         items.length,
-        "Hello, I am massa bot. How can I assist you with your agricultural endeavors today?",
+        "Hello, How can I assist you today?",
         false,
         items.length % 5 == 0,
         Tools.getFormattedTimeEvent(DateTime.now().millisecondsSinceEpoch)));

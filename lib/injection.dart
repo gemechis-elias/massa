@@ -74,6 +74,8 @@ Future<void> init() async {
   //RemoteDataSource
   sl.registerLazySingleton<BlogRemoteDataSource>(() =>
       RemoteDataSource(baseUrl: 'https://blog-api-4z3m.onrender.com/api/v1'));
+
+  // For demo api integration done in widgets
   // Generative AI API
   // https://api.tiletsolution.com/massa/public/api/chat
   // https://api.tiletsolution.com/massa/public/api/dailyInsight

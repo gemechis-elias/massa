@@ -197,7 +197,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                   style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10)),
-                      backgroundColor: const Color(0xFF004600)),
+                      backgroundColor: const Color(0xff20813c)),
                   child: _isLoading
                       ? const CircularProgressIndicator(
                           color: Colors.white,
